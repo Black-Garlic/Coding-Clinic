@@ -44,7 +44,7 @@ public class Bottom_navigation extends AppCompatActivity {
                     toolbar.setTitle("Home");
                     return true;
                 case R.id.navigation_dashboard:
-              //      setRecyclerView();
+                    setRecyclerView();
                     toolbar.setTitle("Feed");
                     return true;
                 case R.id.navigation_notifications:
@@ -87,7 +87,7 @@ public class Bottom_navigation extends AppCompatActivity {
         fragmentTransaction.commit();
 */
     }
-/*
+
     private void setRecyclerView(){
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -110,7 +110,7 @@ public class Bottom_navigation extends AppCompatActivity {
 
         mRecyclerView.setAdapter(myAdapter);
     }
-*/
+
 }
 
 
