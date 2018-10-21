@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="pont_size">30dp</dimen>
+    <dimen name="font_size">30dp</dimen>
     <dimen name="zero">0dp</dimen>
     <dimen name="margin">150dp</dimen>
     <dimen name="picture_size">60dp</dimen>

@@ -14,8 +14,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/black"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/button1"
@@ -24,7 +23,7 @@
         android:onClick="ButtonClick"
         android:background="@color/black"
         android:textColor="@color/white"
-        android:textSize="@dimen/pont_size"
+        android:textSize="@dimen/font_size"
         android:text="Start"
         android:layout_marginTop="@dimen/margin"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
@@ -37,12 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:textSize="@dimen/pont_size"
+        android:textSize="@dimen/font_size"
         android:text="Press Button to Start"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toTopOf="@id/button1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
-
-
 </android.support.constraint.ConstraintLayout>

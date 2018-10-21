@@ -44,7 +44,8 @@ public class Bottom_navigation extends AppCompatActivity {
                     toolbar.setTitle("Home");
                     return true;
                 case R.id.navigation_dashboard:
-                    setRecyclerView();
+                    fragmentTransaction.replace(R.id.home_fragment, new Feed_Fragment());
+                    fragmentTransaction.commit();
                     toolbar.setTitle("Feed");
                     return true;
                 case R.id.navigation_notifications:
@@ -80,12 +81,6 @@ public class Bottom_navigation extends AppCompatActivity {
             }
         });
 
-/*
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.home_fragment, new MainFragment());
-        fragmentTransaction.commit();
-*/
     }
 
     private void setRecyclerView(){

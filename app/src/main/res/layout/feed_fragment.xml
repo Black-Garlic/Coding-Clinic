@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="?attr/actionBarSize"
-    android:background="@color/dark_gary">
+    android:background="@color/dark_gary" >
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="@dimen/font_size"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/Hello"
-        android:textColor="@color/white"
-        android:id="@+id/fragView"/>
+        android:background="@color/dark_gary"
+        android:layout_marginBottom="?attr/actionBarSize"
+        />
 </LinearLayout>

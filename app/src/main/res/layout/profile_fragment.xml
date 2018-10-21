@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="@dimen/pont_size"
+        android:textSize="@dimen/font_size"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/myName"
         android:textColor="@color/white"
