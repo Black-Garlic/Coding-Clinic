@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="?attr/actionBarSize"
     android:background="@color/dark_gary">
 
     <TextView
+        android:id="@+id/userView"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="@dimen/font_size"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/Hello"
+        android:gravity="left|top"
         android:textColor="@color/white"
-        android:id="@+id/fragView"/>
+        />
+
+    <TextView
+        android:id="@+id/contView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/font_size"
+        android:gravity="right|top"
+        android:textColor="@color/white"
+        />
 </LinearLayout>

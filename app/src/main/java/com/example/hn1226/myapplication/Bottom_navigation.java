@@ -82,30 +82,6 @@ public class Bottom_navigation extends AppCompatActivity {
         });
 
     }
-
-    private void setRecyclerView(){
-        mRecyclerView = findViewById(R.id.recycler_view);
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
-        ArrayList<GameInfo> gameInfoArrayList = new ArrayList<>();
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_01, "League of Legends"));
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_02, "Maple Story"));
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_03, "Star Craft"));
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_04, "Kart Rider"));
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_05, "Enter the Gungeon"));
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_06, "The binding of Issac Rebirth"));
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_07, "TEKKEN 7"));
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_08, "DARK SOULS 3"));
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_09, "Hearth Stones"));
-        gameInfoArrayList.add(new GameInfo(R.drawable.image_10, "Mabinogi"));
-
-        MyAdapter myAdapter = new MyAdapter(gameInfoArrayList);
-
-        mRecyclerView.setAdapter(myAdapter);
-    }
-
 }
 
 
