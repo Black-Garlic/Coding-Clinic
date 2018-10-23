@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 public class Profile_Fragment extends Fragment {
 
-    TextView JavacodeTextview;
-
-
     public Profile_Fragment() {
         // Required empty public constructor
     }
@@ -20,7 +17,14 @@ public class Profile_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        final View view = inflater.inflate(R.layout.profile_fragment, container, false);
+        final TextView textView = (TextView) view.findViewById(R.id.fragView);
 
-        return inflater.inflate(R.layout.profile_fragment, container, false);
+        textView.setText("User : " + getString(R.string.myName));
+        textView.append("\nDepartment : " + getString(R.string.myDep));
+        textView.append("\nStuNum : " + getString(R.string.myStuNum));
+        textView.append("\nMail : " + getString(R.string.myMail));
+        textView.append("\nPhone : " + getString(R.string.myPhone));
+        return view;
     }
 }

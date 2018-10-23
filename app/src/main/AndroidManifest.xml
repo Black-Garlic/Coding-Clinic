@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Bottom_navigation"
+            android:name=".SecondActivity"
             android:label="@string/title_activity_bottom_navigation"></activity>
     </application>
 

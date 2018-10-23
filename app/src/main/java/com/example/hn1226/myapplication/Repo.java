@@ -6,12 +6,6 @@ public class Repo {
 
     int contributions;
 
-    @Override
-    public String toString() {
-        login = login.replace(",", "");
-        return login + "\n";
-    }
-
     public String getUser(){
         return "\n" + login;
     }

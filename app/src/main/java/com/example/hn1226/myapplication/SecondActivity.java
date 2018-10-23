@@ -5,50 +5,43 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.TextView;
 
-import java.util.ArrayList;
+public class SecondActivity extends AppCompatActivity {
 
-public class Bottom_navigation extends AppCompatActivity {
-
-    private TextView mTextMessage;
     private Toolbar toolbar;
-
-    RecyclerView mRecyclerView;
-    RecyclerView.LayoutManager mLayoutManager;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    fragmentTransaction.replace(R.id.home_fragment, new MainFragment());
+                    fragmentTransaction.replace(R.id.home_fragment, new Feed_Fragment());
                     fragmentTransaction.commit();
                     toolbar.setTitle("Home");
                     return true;
-                case R.id.navigation_dashboard:
-                    fragmentTransaction.replace(R.id.home_fragment, new Feed_Fragment());
+                case R.id.navigation_upload:
+                    fragmentTransaction.replace(R.id.home_fragment, new Upload_Fragment());
                     fragmentTransaction.commit();
-                    toolbar.setTitle("Feed");
+                    toolbar.setTitle("Upload");
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.navigation_friend:
+                    fragmentTransaction.replace(R.id.home_fragment, new Friend_Fragment());
+                    fragmentTransaction.commit();
+                    toolbar.setTitle("Friend");
+                    return true;
+                case R.id.navigation_profile:
                     fragmentTransaction.replace(R.id.home_fragment, new Profile_Fragment());
                     fragmentTransaction.commit();
                     toolbar.setTitle("Profile");
@@ -61,12 +54,15 @@ public class Bottom_navigation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bottom_navigation);
+        setContentView(R.layout.activity_second);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+        toolbarSetting();
+    }
+
+    private void toolbarSetting(){
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         toolbar.setTitle("Home");
@@ -80,8 +76,5 @@ public class Bottom_navigation extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
             }
         });
-
     }
 }
-
-

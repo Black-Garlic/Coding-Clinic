@@ -1,6 +1,5 @@
 package com.example.hn1226.myapplication;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,11 +11,10 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
-public class MainFragment extends Fragment {
+public class Friend_Fragment extends Fragment {
 
-    public MainFragment() {
+    public Friend_Fragment() {
         // Required empty public constructor
     }
 
@@ -25,7 +23,7 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         GitHubService gitHubService = GitHubService.retrofit.create(GitHubService.class);
         Call<List<Repo>> call = gitHubService.repoContributors("square", "retrofit");
-        final View view = inflater.inflate(R.layout.mainfragment, container, false);
+        final View view = inflater.inflate(R.layout.friend_fragment, container, false);
         final TextView textView1 = (TextView) view.findViewById(R.id.userView);
         final TextView textView2 = (TextView) view.findViewById(R.id.contView);
 

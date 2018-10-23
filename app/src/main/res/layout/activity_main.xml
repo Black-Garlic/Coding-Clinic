@@ -14,7 +14,19 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/black"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        android:id="@+id/logoIcon"
+        android:src="@drawable/instargram_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
     <Button
         android:id="@+id/button1"
@@ -26,10 +38,10 @@
         android:textSize="@dimen/font_size"
         android:text="Start"
         android:layout_marginTop="@dimen/margin"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoIcon"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
     <TextView
         android:id="@+id/xmlTextview"
@@ -38,8 +50,9 @@
         android:textColor="@color/white"
         android:textSize="@dimen/font_size"
         android:text="Press Button to Start"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/logoIcon"
         app:layout_constraintBottom_toTopOf="@id/button1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        />
 </android.support.constraint.ConstraintLayout>
