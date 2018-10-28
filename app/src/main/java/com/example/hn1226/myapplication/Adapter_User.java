@@ -1,5 +1,6 @@
 package com.example.hn1226.myapplication;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,24 +8,29 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
+public class Adapter_User extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
+
+    private ArrayList<UserInfo> userInfoArrayList;
+    private Context context;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView picture;
         TextView name;
+        ImageView picture;
 
         MyViewHolder(View view){
             super(view);
+            name = view.findViewById(R.id.user_name);
             picture = view.findViewById(R.id.game_picture);
-            name = view.findViewById(R.id.game_name);
         }
     }
 
-    private ArrayList<GameInfo> gameInfoArrayList;
-    MyAdapter(ArrayList<GameInfo> gameInfoArrayList){
-        this.gameInfoArrayList = gameInfoArrayList;
+    Adapter_User(ArrayList<UserInfo> userInfoArrayList, Context context){
+        this.userInfoArrayList = userInfoArrayList;
+        this.context = context;
     }
 
     @Override
@@ -39,13 +45,13 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
         MyViewHolder myViewHolder = (MyViewHolder) holder;
-
-        myViewHolder.picture.setImageResource(gameInfoArrayList.get(position).drawableId);
-        myViewHolder.name.setText(gameInfoArrayList.get(position).name);
+        Glide.with(context).load(userInfoArrayList.get(position).avatarUrl).into(myViewHolder.picture);
+        myViewHolder.name.setText(userInfoArrayList.get(position).name);
+        myViewHolder.name.append("\n" + userInfoArrayList.get(position).url);
     }
 
     @Override
     public int getItemCount() {
-        return gameInfoArrayList.size();
+        return userInfoArrayList.size();
     }
 }

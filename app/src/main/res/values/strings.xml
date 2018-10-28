@@ -6,7 +6,7 @@
     <string name="myStuNum">21500453</string>
     <string name="myMail">hn1226@naver.com</string>
     <string name="myPhone" tools:ignore="TypographyDashes">010-2644-1226</string>
-
+    <string name="upload">Upload</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="?attr/actionBarSize"
-    android:background="@color/dark_gary" >
+    android:background="@color/dark_gary">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ButtonClick"
+        android:background="@color/dark_gary"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size"
+        android:text="@string/upload"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/upload_image"
+        android:layout_width="@dimen/upload_image"
+        android:layout_height="@dimen/upload_image"
+        android:onClick="ButtonClick"
+        android:background="@drawable/ic_image_web"
+        app:layout_constraintTop_toBottomOf="@id/upload_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@id/upload_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:gravity="top|left"
+        android:textColor="#FFFFFF"
+        />
+
+</android.support.constraint.ConstraintLayout>

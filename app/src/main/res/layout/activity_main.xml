@@ -22,6 +22,7 @@
         android:layout_height="@dimen/logo_size"
         android:id="@+id/logoIcon"
         android:src="@drawable/instargram_icon"
+        android:layout_marginBottom="@dimen/logo_margin"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -37,22 +38,10 @@
         android:textColor="@color/white"
         android:textSize="@dimen/font_size"
         android:text="Start"
-        android:layout_marginTop="@dimen/margin"
         app:layout_constraintTop_toBottomOf="@id/logoIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <TextView
-        android:id="@+id/xmlTextview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="@dimen/font_size"
-        android:text="Press Button to Start"
-        app:layout_constraintTop_toBottomOf="@id/logoIcon"
-        app:layout_constraintBottom_toTopOf="@id/button1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
 </android.support.constraint.ConstraintLayout>

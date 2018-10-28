@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Feed_Fragment extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private MyAdapter mAdapter;
+    private Adapter_Game mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<GameInfo> gameInfoArrayList = new ArrayList<>();
 
@@ -32,7 +32,7 @@ public class Feed_Fragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.scrollToPosition(0);
-        mAdapter = new MyAdapter(gameInfoArrayList);
+        mAdapter = new Adapter_Game(gameInfoArrayList, getActivity());
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         return view;

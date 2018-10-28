@@ -2,9 +2,11 @@
 <resources>
     <dimen name="font_size">30dp</dimen>
     <dimen name="zero">0dp</dimen>
-    <dimen name="margin">150dp</dimen>
+    <dimen name="button_margin">100dp</dimen>
     <dimen name="picture_size">60dp</dimen>
     <dimen name="logo_size">150dp</dimen>
+    <dimen name="logo_margin">80dp</dimen>
+    <dimen name="upload_image">250dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
