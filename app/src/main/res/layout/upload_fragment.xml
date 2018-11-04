@@ -26,18 +26,40 @@
         android:layout_height="@dimen/upload_image"
         android:onClick="ButtonClick"
         android:background="@drawable/ic_image_web"
-        app:layout_constraintTop_toBottomOf="@id/upload_button"
+        app:layout_constraintTop_toBottomOf="@id/edit_title"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         />
 
     <EditText
-        app:layout_constraintTop_toBottomOf="@id/upload_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_title"
+        android:gravity="left"
+        android:textColor="#FFFFFF"
+        android:hint="Title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/edit_text"
         android:gravity="top|left"
         android:textColor="#FFFFFF"
+        android:hint="Edit Text"
+        app:layout_constraintTop_toBottomOf="@id/upload_image"
+        />
+
+    <ImageView
+        android:id="@+id/upload_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/upload_image"
+        app:layout_constraintTop_toBottomOf="@id/edit_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         />
 
 </android.support.constraint.ConstraintLayout>

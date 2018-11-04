@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication;
+package com.example.hn1226.myapplication.Profile;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.hn1226.myapplication.R;
 
 public class Profile_Fragment extends Fragment {
 

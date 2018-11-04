@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication;
+package com.example.hn1226.myapplication.Feed;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,12 +9,16 @@ import android.view.View;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.example.hn1226.myapplication.Model.GameInfo;
+import com.example.hn1226.myapplication.R;
+import com.example.hn1226.myapplication.Main.Main_Activity;
+
 import java.util.ArrayList;
 
 public class Feed_Fragment extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private Adapter_Game mAdapter;
+    private Game_Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<GameInfo> gameInfoArrayList = new ArrayList<>();
 
@@ -32,7 +36,7 @@ public class Feed_Fragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.scrollToPosition(0);
-        mAdapter = new Adapter_Game(gameInfoArrayList, getActivity());
+        mAdapter = new Game_Adapter(gameInfoArrayList, getActivity());
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         return view;

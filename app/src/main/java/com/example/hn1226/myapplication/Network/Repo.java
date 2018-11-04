@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication;
+package com.example.hn1226.myapplication.Network;
 
 import com.google.gson.annotations.SerializedName;
 

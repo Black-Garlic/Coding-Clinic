@@ -1,6 +1,5 @@
-package com.example.hn1226.myapplication;
+package com.example.hn1226.myapplication.Friend;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -9,10 +8,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import com.example.hn1226.myapplication.Model.UserInfo;
+import com.example.hn1226.myapplication.Network.GitHubService;
+import com.example.hn1226.myapplication.Network.Repo;
+import com.example.hn1226.myapplication.R;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ import retrofit2.Response;
 public class Friend_Fragment extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private Adapter_User mAdapter;
+    private User_Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<UserInfo> userInfoArrayList = new ArrayList<>();
 
@@ -45,7 +46,7 @@ public class Friend_Fragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.scrollToPosition(0);
-        mAdapter = new Adapter_User(userInfoArrayList, getActivity());
+        mAdapter = new User_Adapter(userInfoArrayList, getActivity());
 
         call.enqueue(new Callback<List<Repo>>() {
             @Override

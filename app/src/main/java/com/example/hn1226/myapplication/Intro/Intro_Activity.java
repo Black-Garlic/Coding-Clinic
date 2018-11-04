@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication;
+package com.example.hn1226.myapplication.Intro;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,25 +8,31 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import com.example.hn1226.myapplication.Main.Main_Activity;
+import com.example.hn1226.myapplication.R;
 
-public class MainActivity extends AppCompatActivity {
+
+public class Intro_Activity extends AppCompatActivity {
 
     Toolbar toolbar;
+    Button button;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.intro_activity);
 
-        Button button1 = (Button)findViewById(R.id.button1);
+        imageView = (ImageView)findViewById(R.id.logoIcon);
+
+        button = (Button)findViewById(R.id.button);
     }
 
     public void ButtonClick(View v){
-        Intent second = new Intent(this, SecondActivity.class);
+        Intent second = new Intent(this, Main_Activity.class);
 
         switch (v.getId()){
-            case R.id.button1 :
+            case R.id.button :
                 startActivity(second);
                 break;
         }
