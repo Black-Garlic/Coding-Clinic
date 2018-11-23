@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication.Feed;
+package com.example.hn1226.myapplication.feed;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.hn1226.myapplication.Model.GameInfo;
+import com.example.hn1226.myapplication.model.GameInfo;
 import com.example.hn1226.myapplication.R;
 
 import java.util.ArrayList;
