@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication.Upload;
+package com.example.hn1226.myapplication.upload;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -60,6 +60,10 @@ public class Upload_Fragment extends Fragment {
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(intent, 1);
+    }
+
+    private void upload() {
+
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

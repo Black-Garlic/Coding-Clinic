@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication.Model;
+package com.example.hn1226.myapplication.model;
 
 public class UserInfo {
     public long id;

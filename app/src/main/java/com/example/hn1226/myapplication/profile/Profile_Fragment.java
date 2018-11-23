@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication.Profile;
+package com.example.hn1226.myapplication.profile;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

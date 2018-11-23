@@ -1,6 +1,4 @@
-package com.example.hn1226.myapplication.Model;
-
-import com.example.hn1226.myapplication.UserInfo;
+package com.example.hn1226.myapplication.model;
 
 import java.util.Date;
 
@@ -12,15 +10,15 @@ public class Like {
 
     private Date updateAt;
 
-    private long getId() { return Id; }
+    public long getId() { return Id; }
 
-    private void setId(long Id) { this.Id = Id; }
+    public void setId(long Id) { this.Id = Id; }
 
-    private UserInfo getUser() { return User; }
+    public UserInfo getUser() { return User; }
 
-    private void setUser(UserInfo User) { this.User = User; }
+    public void setUser(UserInfo User) { this.User = User; }
 
-    private Date getUpdateAt() { return updateAt; }
+    public Date getUpdateAt() { return updateAt; }
 
-    private void setUpdateAt(Date updateAt) { this.updateAt = updateAt; }
+    public void setUpdateAt(Date updateAt) { this.updateAt = updateAt; }
 }

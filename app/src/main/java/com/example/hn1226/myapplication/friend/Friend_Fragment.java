@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication.Friend;
+package com.example.hn1226.myapplication.friend;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,9 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.hn1226.myapplication.Model.UserInfo;
-import com.example.hn1226.myapplication.Network.GitHubService;
-import com.example.hn1226.myapplication.Network.Repo;
+import com.example.hn1226.myapplication.model.UserInfo;
+import com.example.hn1226.myapplication.network.GitHubService;
+import com.example.hn1226.myapplication.network.Repo;
 import com.example.hn1226.myapplication.R;
 
 

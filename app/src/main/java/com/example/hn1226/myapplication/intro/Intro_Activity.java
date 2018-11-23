@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication.Intro;
+package com.example.hn1226.myapplication.intro;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.hn1226.myapplication.Main.Main_Activity;
+import com.example.hn1226.myapplication.main.Main_Activity;
 import com.example.hn1226.myapplication.R;
 
 

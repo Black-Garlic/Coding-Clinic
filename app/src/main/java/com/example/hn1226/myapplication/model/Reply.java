@@ -1,6 +1,4 @@
-package com.example.hn1226.myapplication.Model;
-
-import com.example.hn1226.myapplication.UserInfo;
+package com.example.hn1226.myapplication.model;
 
 import java.util.Date;
 
@@ -18,27 +16,27 @@ public class Reply {
 
     private Date updateAt;
 
-    private long getId() { return Id; }
+    public long getId() { return Id; }
 
-    private void setId(long Id) { this.Id = Id; }
+    public void setId(long Id) { this.Id = Id; }
 
-    private UserInfo getUser() { return User; }
+    public UserInfo getUser() { return User; }
 
-    private void setUser(UserInfo User) { this.User = User; }
+    public void setUser(UserInfo User) { this.User = User; }
 
-    private Date getUpdateAt() { return updateAt; }
+    public Date getUpdateAt() { return updateAt; }
 
-    private void setUpdateAt(Date updateAt) { this.updateAt = updateAt; }
+    public void setUpdateAt(Date updateAt) { this.updateAt = updateAt; }
 
-    private String getText() { return text; }
+    public String getText() { return text; }
 
-    private void setText(String text) { this.text = text; }
+    public void setText(String text) { this.text = text; }
 
-    private int getLikeCount() { return likeCount; }
+    public int getLikeCount() { return likeCount; }
 
-    private void setLikeCount(int likeCount) { this.likeCount = likeCount; }
+    public void setLikeCount(int likeCount) { this.likeCount = likeCount; }
 
-    private int getReplyCount() { return replyCount; }
+    public int getReplyCount() { return replyCount; }
 
-    private void setReplyCount(int replyCount) { this.replyCount = replyCount; }
+    public void setReplyCount(int replyCount) { this.replyCount = replyCount; }
 }

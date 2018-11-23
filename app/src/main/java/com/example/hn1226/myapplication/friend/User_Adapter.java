@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication.Friend;
+package com.example.hn1226.myapplication.friend;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.hn1226.myapplication.Model.UserInfo;
+import com.example.hn1226.myapplication.model.UserInfo;
 import com.example.hn1226.myapplication.R;
 
 import java.util.ArrayList;

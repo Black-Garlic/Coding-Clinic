@@ -1,16 +1,24 @@
-package com.example.hn1226.myapplication.Model;
+package com.example.hn1226.myapplication.model;
 
-import com.example.hn1226.myapplication.UserInfo;
+import com.google.gson.annotations.Expose;
 
 import java.util.Date;
 import java.util.List;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName="feed_table")
 public class Feed {
-
+    @PrimaryKey(autoGenerate = true)
     private long Id;
-
+/*
+    @Ignore
+    @Expose
     private UserInfo User;
-
+*/
     private String imageUrl;
 
     private Date updateAt;
@@ -23,41 +31,45 @@ public class Feed {
 
     private int replyCount;
 
-    private List<Reply> Replies;
+    public Feed(@NonNull String text, String imageUrl) {
+        this.text = text;
+        this.imageUrl = imageUrl;
+    }
 
-    private long getId() { return Id; }
+    public Feed() {
+        this.text = "";
+        this.imageUrl = "";
+    }
 
-    private void setId(long Id) { this.Id = Id; }
+    public long getId() { return Id; }
 
-    private UserInfo getUser() { return User; }
+    public void setId(long Id) { this.Id = Id; }
+/*
+    public UserInfo getUser() { return User; }
 
-    private void setUser(UserInfo User) { this.User = User; }
+    public void setUser(UserInfo User) { this.User = User; }
+*/
+    public String getImageUrl() { return imageUrl; }
 
-    private String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
-    private void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public Date getUpdateAt() { return updateAt; }
 
-    private Date getUpdateAt() { return updateAt; }
+    public void setUpdateAt(Date updateAt) { this.updateAt = updateAt; }
 
-    private void setUpdateAt(Date updateAt) { this.updateAt = updateAt; }
+    public String getOpenTo() { return openTo; }
 
-    private String getOpenTo() { return openTo; }
+    public void setOpenTo(String openTo) { this.openTo = openTo; }
 
-    private void setOpenTo(String openTo) { this.openTo = openTo; }
+    public String getText() { return text; }
 
-    private String getText() { return text; }
+    public void setText(String text) { this.text = text; }
 
-    private void setText(String text) { this.text = text; }
+    public int getLikeCount() { return likeCount; }
 
-    private int getLikeCount() { return likeCount; }
+    public void setLikeCount(int likeCount) { this.likeCount = likeCount; }
 
-    private void setLikeCount(int likeCount) { this.likeCount = likeCount; }
+    public int getReplyCount() { return replyCount; }
 
-    private int getReplyCount() { return replyCount; }
-
-    private void setReplyCount(int replyCount) { this.replyCount = replyCount; }
-
-    private List<Reply> getReplies() { return Replies; }
-
-    private void setReplies() { this.Replies = Replies; }
+    public void setReplyCount(int replyCount) { this.replyCount = replyCount; }
 }

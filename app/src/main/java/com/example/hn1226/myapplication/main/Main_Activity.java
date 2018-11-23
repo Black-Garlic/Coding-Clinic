@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication.Main;
+package com.example.hn1226.myapplication.main;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,12 +15,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.hn1226.myapplication.Feed.Feed_Fragment;
-import com.example.hn1226.myapplication.Friend.Friend_Fragment;
-import com.example.hn1226.myapplication.Intro.Intro_Activity;
-import com.example.hn1226.myapplication.Profile.Profile_Fragment;
+import com.example.hn1226.myapplication.feed.Feed_Fragment;
+import com.example.hn1226.myapplication.friend.Friend_Fragment;
+import com.example.hn1226.myapplication.intro.Intro_Activity;
+import com.example.hn1226.myapplication.profile.Profile_Fragment;
 import com.example.hn1226.myapplication.R;
-import com.example.hn1226.myapplication.Upload.Upload_Fragment;
+import com.example.hn1226.myapplication.upload.Upload_Fragment;
 
 public class Main_Activity extends AppCompatActivity {
 

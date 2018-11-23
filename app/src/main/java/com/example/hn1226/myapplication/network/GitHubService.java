@@ -1,4 +1,4 @@
-package com.example.hn1226.myapplication.Network;
+package com.example.hn1226.myapplication.network;
 
 import java.util.List;
 
