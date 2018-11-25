@@ -23,7 +23,7 @@ public class Feed_Adapter extends RecyclerView.Adapter<Feed_Adapter.FeedViewHold
         private FeedViewHolder(View view) {
             super(view);
             picture = view.findViewById(R.id.game_picture);
-            name = view.findViewById(R.id.game_name);
+            name = view.findViewById(R.id.name);
         }
     }
 

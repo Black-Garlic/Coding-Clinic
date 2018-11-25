@@ -1,41 +1,40 @@
 package com.example.hn1226.myapplication.model;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
 import com.google.gson.annotations.Expose;
 
 import java.util.Date;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.PrimaryKey;
-
 @Entity(tableName="feed_table")
 public class Feed {
     @PrimaryKey(autoGenerate = true)
     private long Id;
-/*
-    @Ignore
-    @Expose
-    private UserInfo User;
-*/
+
     private String imageUrl;
 
     private Date updateAt;
 
-    private String openTo;
-
     private String text;
 
-    private int likeCount;
+    private String userName;
 
-    private int replyCount;
+    private int likeCount = 0;
+
+    private int replyCount = 0;
 
     public Feed(@NonNull String text, String imageUrl) {
         this.text = text;
         this.imageUrl = imageUrl;
+        Date date = new Date();
+        this.updateAt = date;
     }
 
+    @Ignore
     public Feed() {
         this.text = "";
         this.imageUrl = "";
@@ -44,11 +43,11 @@ public class Feed {
     public long getId() { return Id; }
 
     public void setId(long Id) { this.Id = Id; }
-/*
-    public UserInfo getUser() { return User; }
 
-    public void setUser(UserInfo User) { this.User = User; }
-*/
+    public String getUserName() { return userName; }
+
+    public void setUserName(String userName) { this.userName = userName; }
+
     public String getImageUrl() { return imageUrl; }
 
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
@@ -56,10 +55,6 @@ public class Feed {
     public Date getUpdateAt() { return updateAt; }
 
     public void setUpdateAt(Date updateAt) { this.updateAt = updateAt; }
-
-    public String getOpenTo() { return openTo; }
-
-    public void setOpenTo(String openTo) { this.openTo = openTo; }
 
     public String getText() { return text; }
 

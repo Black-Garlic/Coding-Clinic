@@ -24,7 +24,7 @@ public class FeedViewModel extends AndroidViewModel {
         return mAllFeeds;
     }
 
-    public void insert(Feed feed) {
-        mRepository.insert(feed);
+    public void insert(Feed Feed) {
+        mRepository.insert(Feed);
     }
 }

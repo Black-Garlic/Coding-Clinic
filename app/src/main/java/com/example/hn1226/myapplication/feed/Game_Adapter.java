@@ -22,11 +22,17 @@ public class Game_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView picture;
         TextView name;
+        TextView text;
+        TextView like_reply;
+        TextView update;
 
         MyViewHolder(View view){
             super(view);
             picture = view.findViewById(R.id.game_picture);
-            name = view.findViewById(R.id.game_name);
+            name = view.findViewById(R.id.name);
+            text = view.findViewById(R.id.text);
+            like_reply = view.findViewById(R.id.like_reply);
+            update = view.findViewById(R.id.update_time);
         }
     }
 
@@ -50,6 +56,9 @@ public class Game_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
         Glide.with(context).load(gameInfoArrayList.get(position).drawableId).into(myViewHolder.picture);
         myViewHolder.name.setText(gameInfoArrayList.get(position).name);
+        myViewHolder.text.setText("Text");
+        myViewHolder.like_reply.setText("Like = 0        Reply = 0");
+        myViewHolder.update.setText("04");
     }
 
     @Override

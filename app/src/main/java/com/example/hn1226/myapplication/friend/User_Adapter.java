@@ -26,7 +26,7 @@ public class User_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         MyViewHolder(View view){
             super(view);
             name = view.findViewById(R.id.user_name);
-            picture = view.findViewById(R.id.game_picture);
+            picture = view.findViewById(R.id.picture);
         }
     }
 
@@ -37,7 +37,7 @@ public class User_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_row, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_friend, parent, false);
 
         return new MyViewHolder(v);
     }

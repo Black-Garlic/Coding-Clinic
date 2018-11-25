@@ -35,8 +35,8 @@ public class FeedRepository {
         }
 
         @Override
-        protected Void doInBackground(final Feed... feeds) {
-            mAsyncTaskDao.insert(feeds[0]);
+        protected Void doInBackground(final Feed... params) {
+            mAsyncTaskDao.insert(params[0]);
             return null;
         }
     }

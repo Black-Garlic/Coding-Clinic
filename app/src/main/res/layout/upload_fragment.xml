@@ -37,7 +37,7 @@
         android:id="@+id/edit_title"
         android:gravity="left"
         android:textColor="#FFFFFF"
-        android:hint="Title"
+        android:hint="Name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
 
