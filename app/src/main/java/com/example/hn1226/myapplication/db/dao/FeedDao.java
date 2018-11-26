@@ -13,7 +13,6 @@ import java.util.List;
 
 @Dao
 public interface FeedDao {
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(Feed feed);
 

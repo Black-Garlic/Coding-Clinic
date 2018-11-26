@@ -36,14 +36,15 @@ public class Feed_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        setRecyclerView();
+
         View view = inflater.inflate(R.layout.feed_fragment, container, false);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.scrollToPosition(0);
-        mAdapter = new Game_Adapter(gameInfoArrayList, getActivity());
+//      setRecyclerView();
+//      mAdapter = new Game_Adapter(gameInfoArrayList, getActivity());
         feedAdapter = new Feed_Adapter(getActivity());
         mRecyclerView.setAdapter(feedAdapter);
 

@@ -51,14 +51,6 @@
             android:textSize="@dimen/font_size"
             />
 
-        <Button
-            android:id="@+id/add_like"
-            android:layout_width="@dimen/font_size"
-            android:layout_height="@dimen/font_size"
-            android:gravity="left"
-            android:background="@mipmap/ic_like"
-            />
-
         <TextView
             android:id="@+id/like_reply"
             android:layout_width="wrap_content"

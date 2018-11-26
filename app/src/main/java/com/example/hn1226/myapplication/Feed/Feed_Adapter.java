@@ -9,11 +9,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.hn1226.myapplication.R;
 import com.example.hn1226.myapplication.model.Feed;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Feed_Adapter extends RecyclerView.Adapter<Feed_Adapter.FeedViewHolder> {
@@ -33,14 +32,15 @@ public class Feed_Adapter extends RecyclerView.Adapter<Feed_Adapter.FeedViewHold
             text = view.findViewById(R.id.text);
             like_reply = view.findViewById(R.id.like_reply);
             update = view.findViewById(R.id.update_time);
-            addLike= view.findViewById(R.id.add_like);
         }
     }
 
     private final LayoutInflater mInflater;
     private List<Feed> mFeeds;
+    private Context context;
 
     public Feed_Adapter(Context context) {
+        this.context = context;
         mInflater = LayoutInflater.from(context);
     }
 
@@ -56,9 +56,10 @@ public class Feed_Adapter extends RecyclerView.Adapter<Feed_Adapter.FeedViewHold
     public void onBindViewHolder(FeedViewHolder holder, int position) {
         if (mFeeds != null) {
             Feed current = mFeeds.get(position);
+            Glide.with(context).load(mFeeds.get(position).getImageUrl()).into(holder.picture);
             holder.name.setText(current.getUserName());
             holder.text.setText(current.getText());
-            holder.like_reply.setText("Like = " + current.getLikeCount() + "       " + "Reply = " + current.getReplyCount());
+            holder.like_reply.setText("Like = " + current.getLikeCount() + "            " + "Reply = " + current.getReplyCount());
             holder.update.setText("" + current.getUpdateAt());
         } else {
             holder.name.setText("No Text");

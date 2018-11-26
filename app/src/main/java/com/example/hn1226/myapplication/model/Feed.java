@@ -5,10 +5,7 @@ import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-import com.google.gson.annotations.Expose;
-
 import java.util.Date;
-import java.util.List;
 
 @Entity(tableName="feed_table")
 public class Feed {
@@ -30,7 +27,7 @@ public class Feed {
     public Feed(@NonNull String userName, String text, String imageUrl) {
         this.userName = userName;
         this.text = text;
-        this.imageUrl = "1";
+        this.imageUrl = imageUrl;
         Date date = new Date();
         this.updateAt = date;
     }

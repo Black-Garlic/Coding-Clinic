@@ -8,8 +8,6 @@ import android.content.Context;
 
 import com.example.hn1226.myapplication.db.dao.FeedDao;
 import com.example.hn1226.myapplication.model.Feed;
-import com.example.hn1226.myapplication.model.UserInfo;
-
 
 @Database(entities = {Feed.class}, version=1, exportSchema = false)
 @TypeConverters(DateTypeConverter.class)
