@@ -20,6 +20,7 @@ import com.example.hn1226.myapplication.friend.Friend_Fragment;
 import com.example.hn1226.myapplication.intro.Intro_Activity;
 import com.example.hn1226.myapplication.profile.Profile_Fragment;
 import com.example.hn1226.myapplication.R;
+import com.example.hn1226.myapplication.upload.Upload_Activity;
 import com.example.hn1226.myapplication.upload.Upload_Fragment;
 
 public class Main_Activity extends AppCompatActivity {
@@ -53,9 +54,15 @@ public class Main_Activity extends AppCompatActivity {
                     toolbar.setTitle("Home");
                     return true;
                 case R.id.navigation_upload:
+                    /*
+                    Intent upload = new Intent(getApplicationContext(), Upload_Activity.class);
+                    startActivity(upload);
+                    */
+
                     fragmentTransaction.replace(R.id.home_fragment, new Upload_Fragment());
                     fragmentTransaction.commit();
                     toolbar.setTitle("Upload");
+
                     return true;
                 case R.id.navigation_friend:
                     fragmentTransaction.replace(R.id.home_fragment, new Friend_Fragment());

@@ -1,6 +1,9 @@
 package com.example.hn1226.myapplication.feed;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,10 +12,13 @@ import android.view.View;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.example.hn1226.myapplication.db.FeedViewModel;
+import com.example.hn1226.myapplication.model.Feed;
 import com.example.hn1226.myapplication.model.GameInfo;
 import com.example.hn1226.myapplication.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Feed_Fragment extends Fragment {
 
@@ -21,6 +27,7 @@ public class Feed_Fragment extends Fragment {
     private Feed_Adapter feedAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<GameInfo> gameInfoArrayList = new ArrayList<>();
+    private FeedViewModel mFeedViewModel;
 
     public Feed_Fragment() {
         // Required empty public constructor
@@ -38,7 +45,18 @@ public class Feed_Fragment extends Fragment {
         mRecyclerView.scrollToPosition(0);
         mAdapter = new Game_Adapter(gameInfoArrayList, getActivity());
         feedAdapter = new Feed_Adapter(getActivity());
-        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(feedAdapter);
+
+        mFeedViewModel= ViewModelProviders.of(getActivity()).get(FeedViewModel.class);
+
+        mFeedViewModel.getAllFeed().observe(this, new Observer<List<Feed>>() {
+            @Override
+            public void onChanged(@Nullable final List<Feed> Feed) {
+                // Update the cached copy of the words in the adapter.
+                feedAdapter.setTexts(Feed);
+            }
+        });
+
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         return view;
     }

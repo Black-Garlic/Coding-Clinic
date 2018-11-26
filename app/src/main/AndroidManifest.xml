@@ -23,6 +23,7 @@
         <activity
             android:name=".main.Main_Activity"
             android:label="@string/title_activity_bottom_navigation" />
+        <activity android:name=".upload.Upload_Activity"></activity>
     </application>
 
 </manifest>

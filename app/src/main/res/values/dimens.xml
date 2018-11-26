@@ -2,6 +2,7 @@
 <resources>
     <dimen name="font_size">30dp</dimen>
     <dimen name="zero">0dp</dimen>
+    <dimen name="date_size">15dp</dimen>
     <dimen name="button_margin">100dp</dimen>
     <dimen name="picture_size">60dp</dimen>
     <dimen name="logo_size">150dp</dimen>

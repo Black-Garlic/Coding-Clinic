@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,9 +27,10 @@ public class Game_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         TextView like_reply;
         TextView update;
 
+
         MyViewHolder(View view){
             super(view);
-            picture = view.findViewById(R.id.game_picture);
+            picture = view.findViewById(R.id.picture);
             name = view.findViewById(R.id.name);
             text = view.findViewById(R.id.text);
             like_reply = view.findViewById(R.id.like_reply);

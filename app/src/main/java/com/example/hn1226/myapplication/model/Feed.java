@@ -27,9 +27,10 @@ public class Feed {
 
     private int replyCount = 0;
 
-    public Feed(@NonNull String text, String imageUrl) {
+    public Feed(@NonNull String userName, String text, String imageUrl) {
+        this.userName = userName;
         this.text = text;
-        this.imageUrl = imageUrl;
+        this.imageUrl = "1";
         Date date = new Date();
         this.updateAt = date;
     }
